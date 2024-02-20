@@ -1,13 +1,10 @@
-let plohieSlova = ["дурачёк", "дебил", "тупой"]
-let diestvie = ["ударить об стенку", "выбросить из окна"]
+let account = [
 
-let draznilka = ["Ты такой", plohieSlova[Math.floor(Math.random() * plohieSlova.length)], ", что тебя хочется", diestvie[Math.floor(Math.random() * diestvie.length)]]
-
-console.log(draznilka);
-
+]
 
 let user = {
     name: "Rushan",
+    tel: "+7 (916) 007-00-00",
     admin: true,
     money: 100000,
     сurrency: "rub",
@@ -16,15 +13,17 @@ let user = {
     messages: ["Привет", "Как дела?"]
 }
 
-let x = 0
-while (x <= 2) {
-    console.log(x++);
+function rename () {
+    user.name = prompt("Введите ваше новое имя");
+    console.warn("Ваше имя изменено. Ваше новое имя:" + user.name );
+    return user.name;
+}
+
+function createAccount () {
+    user.name = prompt("Ваше имя");
+    user.tel = prompt("Укажите ваш номер телефона");
+
+    return user.name, user.tel;
 }
 
 
-let animals = ["Кот", "Рыба", "Лемур", "Комодский варан"];
-
-for (let y = 0; y < animals.length; y++) {
-    animals[y] = animals[y] + " - прекрасное животное";
-    console.log(animals[y]);
-}
